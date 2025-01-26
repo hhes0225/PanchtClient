@@ -12,7 +12,17 @@ public class Request<TReq, TRes> where TRes:IResponse, new()
 
     public async Task<TRes> PostRequest(TReq request, string server, string type)
     {
-        string url = "http://localhost:" + server + "/" + type;
+        if (server == "27015")
+        {
+            server = "account";
+        }
+        else if (server == "27030")
+        {
+            server = "game";
+        }
+
+        string url = "http://pancht.p-cube-plus.com:20080/" + server + "/" + type;
+        Debug.Log(url);
         string jsonData = JsonConvert.SerializeObject(request);
         HttpContent content = new StringContent(jsonData, Encoding.UTF8, "application/json");
 

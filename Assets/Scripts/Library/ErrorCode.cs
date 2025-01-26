@@ -9,48 +9,58 @@ public enum ErrorCode : UInt16
 
     //Common Error 贸府: 1000~
     UnhandledException = 1001,
-    InvalidRequest = 1003,
-    HttpConnectionFail = 1004,
+    InvalidRequest = 1002,
+    HttpConnectionFail = 1003,
 
     //Register Error 贸府: 2000~
     RegisterFailException = 2001,
     RegisterFailEmailExist = 2002,
     RegisterFailPasswordNotMatch = 2003,
 
-    //Account Server 螟 Login Error 贸府: 3000~
-    LoginFailException = 3001,
-    LoginFailVerification = 3002,
+    //Account Server 螟 Login Error 贸府: 2100~
+    LoginFailException = 2101,
+    LoginFailVerification = 2102,
 
-    //牢刘 配奴 Error 贸府: 4000~
-    RedisFailException = 4001,
-    AuthTokenFailException = 4002,
-    AuthTokenRegisterFail = 4003,
-    AuthTokenInfoNotExist = 4004,
-    AuthTokenIdNotMatch = 4005,
-    AuthTokenTokenNotMatch = 4006,
+    //牢刘 配奴 Error 贸府: 2200~
+    RedisFailException = 2201,
+    AuthTokenFailException = 2202,
+    AuthTokenRegisterFail = 2203,
+    AuthTokenInfoNotExist = 2204,
+    AuthTokenIdNotMatch = 2205,
+    AuthTokenTokenNotMatch = 2206,
 
-    //Account DB Error 贸府: 5000~
-    AccountDbFailException = 5001,
-    AccountDbConnectionFail = 5002,
+    //Account DB Error 贸府: 3000~
+    AccountDbFailException = 3001,
+    AccountDbConnectionFail = 3002,
 
-    //Game Server 螟 Login Error 贸府: 6000~
-    LoginFailAccountConnectionException = 6001,
+    //Game SQL(Game Data) Error 贸府: 3100~
+    GameDataCreateFailException = 3101,
+    GameDataLoadException = 3102,
+    GameCreateFailNicknameExist = 3103,
+    GameDataNotExist = 3104,
+    GameCharacterDataNotExist = 3105,
+    GameCharacterDataLoadFail = 3106,
 
-    //Game Data Error 贸府: 7000~
-    GameDataCreateFailException = 7001,
-    GameDataLoadFleException = 7002,
-    GameCreateFailNicknameExist = 7003,
-    GameDataNotExist = 7004,
-    GameCharacterDataNotExist = 7005,
+    //Game Server Redis Error 贸府: 3200~
+    GameServerRedisException = 3201,
+    GameServerAuthTokenRegisterFail = 3202,
+    GameServerAuthTokenInfoNotExist = 3203,
+    GameServeAuthTokenIdNotMatch = 3204,
+    GameServeAuthTokenNotMatch = 3205,
 
-    //Game Server Redis Error 贸府: 8000~
-    GameServerRedisException = 8001,
-    GameServerAuthTokenRegisterFail = 8002,
-    GameServerAuthTokenInfoNotExist = 8003,
-    GameServeAuthTokenIdNotMatch = 8004,
-    GameServeAuthTokenNotMatch = 8004,
+    //Game Server 螟 Login Error 贸府: 4000~
+    LoginFailAccountConnectionException = 4001,
 
-    //Game Matching Error 贸府: 9000~
-    GameMatchingFailException = 9001,
-    GameMatchingWaiting = 9002,
+    //Attendance Error 贸府: 4100~
+    AttendanceDataLoadFail = 4101,
+    AttendanceDataCreateFail = 4102,
+    AttendanceDataUpdateFail = 4103,
+    AttendanceDataNotExist = 4104,
+    AttendanceAlreadyDone = 4105,
+    AttendanceDataCreateFailException = 4106,
+    AttendanceDataUpdateFailException = 4107,
+
+    //Game Matching Error 贸府: 5000~
+    GameMatchingFailException = 5001,
+    GameMatchingWaiting = 5002,
 }

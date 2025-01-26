@@ -114,6 +114,7 @@ public class ReqCheckMatching
 public class ResCheckMatching : IResponse
 {
     public ErrorCode Result { get; set; } = ErrorCode.None;
-    public string SocketServerAddress { get; set; } = string.Empty;
+    public string? SocketServerAddress { get; set; } = string.Empty;
+    public int Port { get; set; } = 0; 
     public int RoomNumber { get; set; } = 0;
 }

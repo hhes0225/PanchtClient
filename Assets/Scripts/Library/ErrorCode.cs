@@ -63,4 +63,8 @@ public enum ErrorCode : UInt16
     //Game Matching Error 처리: 5000~
     GameMatchingFailException = 5001,
     GameMatchingWaiting = 5002,
+
+    //Matching Server 측 관련 Error: 5100~
+    MatchingFailError = 5102,
+    MatchingNotYet = 5103,
 }

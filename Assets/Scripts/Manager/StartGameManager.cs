@@ -25,11 +25,11 @@ public class StartGameManager : MonoBehaviour
 
         //게임 서버 매칭 요청
         var matchingRequest = new Request<ReqMatching, ResMatching>();
-        var matchingResponse = await matchingRequest.PostRequest(matchingData, "27030", "Matching");
+        var matchingResponse = await matchingRequest.PostRequest(matchingData, "27030", "RequestMatching");
 
         
 
-        if(matchingResponse.Result != ErrorCode.None)
+        if(matchingResponse.Result == ErrorCode.None)
         {
             Debug.Log("매칭 요청 성공!");
 
@@ -73,7 +73,7 @@ public class StartGameManager : MonoBehaviour
             {
                 Debug.LogWarning("매칭 실패!");
             }
-            else if (response.Result == ErrorCode.GameMatchingWaiting)
+            else if (response.Result == ErrorCode.MatchingNotYet)
             {
                 Debug.Log("매칭 대기 중...");
             }

@@ -101,7 +101,7 @@ public class ReqMatching
 [System.Serializable]
 public class ResMatching : IResponse
 {
-    public ErrorCode Result { get; set; } = ErrorCode.None;
+    public ErrorCode Result { get; set; }
 }
 
 [System.Serializable]
@@ -113,7 +113,7 @@ public class ReqCheckMatching
 [System.Serializable]
 public class ResCheckMatching : IResponse
 {
-    public ErrorCode Result { get; set; } = ErrorCode.None;
+    public ErrorCode Result { get; set; }
     public string? SocketServerAddress { get; set; } = string.Empty;
     public int Port { get; set; } = 0; 
     public int RoomNumber { get; set; } = 0;
